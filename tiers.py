@@ -6,6 +6,7 @@ if amount >= 1000:
 elif amount >= 500:
     discount_percent = 10
 else:
+    discount_percent = 0
 
 discount_amount = amount * discount_percent / 100
 final_amount = amount - discount_amount
