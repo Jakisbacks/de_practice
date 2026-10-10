@@ -2,8 +2,13 @@
 amount = int(input("Order amount: "))
 
 if amount >= 1000:
-    print("20% discount")
+    discount_percent = 20
 elif amount >= 500:
-    print("10% discount")
+    discount_percent = 10
 else:
-    print("No discount")
+
+discount_amount = amount * discount_percent / 100
+final_amount = amount - discount_amount
+print("Discount:",discount_percent,"%")
+print("Discount amount:",discount_amount)
+print("Final amount:",final_amount)
