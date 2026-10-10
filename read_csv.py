@@ -12,3 +12,8 @@ with open("orders.csv") as file:
 
 print("Total:",total)
 print("Delhi Total amount:",delhi_total)
+
+
+with open("summary.txt","w") as out_file:
+    out_file.write("Total: " + str(total) + "\n")
+    out_file.write("Delhi Total amount: " + str(delhi_total) + "\n")
