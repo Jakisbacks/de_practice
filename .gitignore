@@ -2,3 +2,4 @@ __pycache__/
 .idea/
 summary.txt
 clean_orders.csv
+rejected_orders.csv
