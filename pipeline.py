@@ -22,10 +22,14 @@ def load(rows, path):
         writer.writeheader()
         writer.writerows(rows)
 
-raw_rows = extract("dirty_orders.csv")
-good_rows, bad_rows = transform(raw_rows)
-load(good_rows, "clean_orders.csv")
-load(bad_rows, "rejected_orders.csv")
+def main():
+    raw_rows = extract("dirty_orders.csv")
+    good_rows, bad_rows = transform(raw_rows)
+    load(good_rows, "clean_orders.csv")
+    load(bad_rows, "rejected_orders.csv")
 
-print("Clean rows:", len(good_rows))
-print("Bad rows:", len(bad_rows))
+    print("Clean rows:", len(good_rows))
+    print("Bad rows:", len(bad_rows))
+
+if __name__ == "__main__":
+    main()
